@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,noarchive, nofollow" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Brett Bittola</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <header><img src="android-chrome-192x192.png" alt="Brett Bittola" /><h1>Brett Bittola</h1></header> 
+
+    <nav><a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+        <a href="staff.html">Staff</a>
+    </nav>
+
+    <main><section><h2>Pet Products For Sale</h2>
+        <article>
+        <form action="/order" method="POST">
+            <fieldset>
+                <legend>Please select one item per purchase</legend>
+                    <p><label>First and Last Name:
+                        <input type="text" 
+                        name="firstLast" 
+                        id="firstLast" 
+                        class="required"
+                        aria-required="true"
+                        size="30" 
+                        maxlength="100" 
+                        required 
+                        placeholder="First and last name" 
+                        autofocus />
+                    </label></p>
+                    <p><label>Email address:</p>
+                        <input type="email" 
+                        name="email" 
+                        id="email" 
+                        class="required"
+                        aria-required="true"
+                        size="30" 
+                        maxlength="100" 
+                        required 
+                        placeholder="Enter your Email address" />
+                    </label></p>
+                    <p><label>Mailing Address:</p>
+                        <input type="text" 
+                        name="address" 
+                        id="address" 
+                        class="required"
+                        aria-required="true"
+                        size="30" 
+                        maxlength="100" 
+                        required 
+                        placeholder="Enter your mailing address" 
+                        autofocus />
+                    </label></p>
+                    <label for="delivery">Add any special delivery instructions here.</label>
+                        <textarea 
+                            name="delivery" 
+                            id="delivery" 
+                            aria-required="true"
+                            minlength="1" 
+                            maxlength="300" 
+                            placeholder="Please leave any special delivery instructions here. Maximum 300 characters."></textarea>
+                </fieldset>
+            <fieldset>
+                <legend>
+                    <table>
+                        <caption>Pet Products</caption>
+                            <thead>
+                                <tr>
+                                <th>Company Name</th>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AGYM</td>
+                                    <td><label for="agym">Spinning Cat Scratcher Ball
+                                        <input type="radio" required
+                                        name="product"
+                                        id="agym"
+                                        value="Spinning Cat Scratcher Ball" /></label></td>
+                                    <td class="num">$52.99</td>
+                                </tr>                                
+                                <tr>
+                                    <td>Jasonwell</td>
+                                    <td><label for="jasonwell">Foldable Dog Pool
+                                        <input type="radio"
+                                        name="product"
+                                        id="jasonwell"
+                                        value="Foldable Dog Pool" /></label></td>
+                                    <td class="num">$27.25</td>
+                                </tr>
+                                <tr>
+                                    <td>Expawlorer</td>
+                                    <td><label for="expawlorer">Dog Fence Window
+                                        <input type="radio" 
+                                        name="product"
+                                        id="expawlorer"
+                                        value="Dog Fence Window" /></label></td>
+                                    <td class="num">$30.50</td>
+                                </tr>
+                                <tr>
+                                    <td>Lollimeow</td>
+                                    <td><label for="lollimeow">Capsule Pet Travel Backpack
+                                        <input type="radio" 
+                                        name="product"
+                                        id="lollimeow"
+                                        value="Capsule Pet Travel Backpack" /></label></td>
+                                    <td class="num">$59.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Drool'd</td>
+                                    <td><label for="droold">Cat Hamster Wheel
+                                        <input type="radio" 
+                                        name="product"
+                                        id="droold"
+                                        value="Cat Hamster Wheel" /></label></td>
+                                    <td class="num">$349.75</td>
+                                </tr>
+                                <tr>
+                                    <td>Lollimeow</td>
+                                    <td><label for="catBackPack">Sherpa Bubble Cat Carrier Backpack
+                                        <input type="radio" 
+                                        name="product"
+                                        id="catBackPack"
+                                        value="Sherpa Bubble Cat Carrier Backpack" /></label></td>
+                                    <td class="num">$79.99</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                    <legend>How many would you like to purchase?</legend>
+                    <p><label for="quantity">Maximum of 30 per order.
+                    <input type="number" 
+                        name="quantity" 
+                        id="quantity" 
+                        max="30" 
+                        class="required"
+                        required 
+                        placeholder="Please enter a number." /> 
+                        </label></p>
+                    <button type="submit">Submit review</button>
+                </legend>
+            </fieldset>
+            
+        </form>
+        
+        
+        
+        </article>
+    </main>
+    <footer><p>&copy; 2024 Brett Bittola</p></footer>
+    </body>
+</html>

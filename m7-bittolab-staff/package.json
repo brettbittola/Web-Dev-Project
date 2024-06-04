@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.9"
+  },
+  "name": "bittolab6",
+  "version": "1.0.0",
+  "description": "module6",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.mjs"
+  },
+  "author": "brettbittola",
+  "license": "ISC"
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,noarchive, nofollow" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Brett Bittola</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <header><img src="android-chrome-192x192.png" alt="Brett Bittola" /><h1>Brett Bittola</h1></header> 
+
+
+    <nav><a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+        <a href="staff.html">Staff</a>
+    </nav>
+
+    <main><section><h2>Web Dev Concepts</h2>
+        <nav class="local">
+            <a href="#servers">Web Servers</a>
+            <a href="#design">Frontend Design</a>
+            <a href="#images">Optimizing Images</a>
+            <a href="#favicons">Favicons</a>
+            <a href="#css">CSS</a>
+            <a href="#forms">Forms</a>
+            <a href="#express">Express</a>
+            <a href="#javascript">JavaScript</a>
+        </nav></section>
+
+    <article id="servers"><h3>Web Servers</h3>
+
+    <p>A <strong>designated homepage</strong> is the default page that pulls up when you visit a website. 
+    In most web servers, the last "/" in a URL is set to pull up this file. Typically, the designated homepage is named "index.html", such as with the Apache web server.
+    There are a few cases where another file name is used, like "default.html" for Microsoft's .NET, "index.js" or "index.php".</p>
+    
+    <p>The <strong>Web Dev/Inspector Network</strong> tab output screen tells us a lot of information about the HTTP request, such as a page's status, IP, method, language, etc.
+    On both my local computer and the web server, when checking my index.html file, I have a GET request method, as well as a 200 OK status code. 
+    The web server includes a remote IP address that my local computer didn't, as well as a lot more information about response and request headers. 
+    My local file only showed the content type and date the file was last modified under the response headers, and the platform and program the file was open on, which was Windows and Google Chrome. 
+    The web server response header showed more information about the content type and length, and the server it was on, which was Apache.
+    The web server request header showed the same information as the local file, as well as the host, cookie and connection information, and a few other things.
+    The Request URL showing the location of the file is also different for each.</p>
+            
+    <p>HTTP provides us with responses in the form of 3-digit <strong>status codes</strong> to let us know if our request was completed, or if not, what error we ran into. 
+    A status code of 200 returns OK, meaning the request to 'get', 'delete' or 'put' some information has succeeded. 
+    A status code of 400 returns Bad Request, meaning the request cannot be processed due to a client error, such as a required parameter that is missing. 
+    The reason we received a 404 status code for main.css and main.js is because these files have not been added yet. 
+    The favicon is automatically provided by OSU's server, so it returns a status code of 200.</p>
+        
+    <p>The web server URL is https://web.engr.oregonstate.edu/~bittolab/M1/a1-bittolab/. The <strong>scheme</strong> is "https://", the <strong>subdomain</strong> is "web.engr.", the <strong>host domain</strong> is "oregonstate.edu", 
+    the <strong>path</strong> to the page is "~bittolab/M1/a1-bittolab/". The path consists of the root directory, "~bittolab", with "M1" and "a1-bittolab" being subfolders. The last "/" leads to the "index.html" file, 
+    which is the designated homepage.</p></article>
+
+    <article id="design"><h3>Frontend Design</h3>
+        
+    <p><strong>Frontend design</strong> is the user's experience of a website. 
+    It focuses on how a page looks and operates, and includes the visual design, graphical user-interface, or GUI, and the interactive experience.
+    The quality of a user's experience is called usability, and is made up of Five E's.</p>
+    
+    <dl><dt>Effective</dt>
+        <dd>Making sure the user can find what they're looking for.</dd>
+        <dt>Efficient</dt>
+        <dd>How quickly someone can get what they're looking for.</dd>
+        <dt>Easy to navigate</dt>
+        <dd>How easy it is for a user to understand and find what they want to find, especially for first-time users.</dd>
+        <dt>Error-free</dt>
+        <dd>Making sure there are little to no errors, or roadblocks users encounter when using the website.</dd>
+        <dt>Enjoyable or Engaging</dt>
+        <dd>Ensuring visiting the website is an overall good experience, and fits the needs of its audience.</dd>
+    </dl>
+    
+    <p><strong>Page layout tags</strong> help to separate content in a webpage. 
+        These tags include header, nav, main, section, articles, asides, and footer.
+        The <strong>header</strong> tag includes information like the name of the site, publisher, or marketing slogan. It usually remains the same for each page within a website.
+        The <strong>nav</strong> tag creates links used to easily navigate to other parts of the website.
+        The <strong>main</strong> element is where the majority of the website's content is stored.
+        The <strong>section</strong> element is used to group similar content blocks together.
+        The <strong>article</strong> tag is used within the section element to represent a smaller piece of content related to that topic.
+        The <strong>aside</strong> tag is often used to add notes related to an article, frequently appearing out to the side.
+        And finally, the <strong>footer</strong> element appears at the bottom, and includes legal, contact and copyright information, as well as any other necessary links.
+        </p>
+        
+    <ol>
+        <li>Content can be linked to by <strong>external anchors</strong> by making the href attribute an outside URL, or an absolute path.</li>
+        <li><strong>Internal anchors</strong> are used to link text items together on the same page by making the href attribute a hashtag, along with the ID attribute of the text item you want to link to.</li>
+        <li><strong>Page-to-page anchors</strong> link separate files of a website together, typically by using a relative path. 
+            This is done by including just the file name in the href attribute, if it is in the same folder as the current page.
+            If the file is in a child directory, we can move down into those folders by using "/" between the directories and file names. 
+            It should look like "root/subfolder/page.html"
+            If the file is in a parent directory, we can move up a directory by using "../", or ".." for each directory you move up.
+            It should look like "../parent/page.html".</li></ol>
+    </article>
+
+    <article id="images">
+        <h3>Optimizing Images</h3>
+        
+        <p>The 6 image optimizing specifications are descriptive file name, small file size, exact dimensions, correct file format, reduced resolution and color mode. 
+        <strong>Descriptive file names</strong> are used to describe a picture in detail, so search engines can easily find and categorize it. 
+        <strong>Small file sizes</strong> are essential to keep loading times low. 
+        Lossy compression can cause pixelation, while lossless compression maintains the visual quality.
+        <strong>Exact dimensions</strong> make sure an image fits the dimensions of the screen it is being viewed on, by reducing the image's size.
+        <strong>Correct file format</strong> matters because .JPG, .GIF and .PNG all have their own benefits, depending on what they are being used for.
+        <strong>Reduced resolution</strong> depending on monitor size. Between 72 and 300+ pixels per inch is the range for most monitors. 
+        Higher resolution monitors are becoming more widely available now, so it is important to include multiple image sizes.
+        <strong>Color Mode</strong>. RGB is used for certain file types, while indexed is used for other types.</p>
+
+
+        <p>Photos are typically file type .JPG or .WebP. 
+            <strong>JPG</strong> files have a lot of detail and millions of colors, which are better for photographs, and are able to compress down large files to save space, making it easier for websites to download them quickly.  
+            <strong>WebP</strong> files are similar to .JPG files, but they are able to have transparent backgrounds with an alpha channel. 
+        Line-art is typically .PNG, .SVG, or .GIF file type.
+            <strong>PNG</strong> files have true transparency and usually use RGB color mode, but can sometimes be compressed to indexed color mode. It is best for solid colors and biomorphic shapes.
+            <strong>SVG</strong> files are used for two-dimensional or animated images. 
+            <strong>GIF</strong> files have 8-bit transparency, have anti-alias edges and can save short animated photo sequences. They also use an indexed color mode.
+        </p></article>
+
+    <article id="favicons">
+        <h3>Favicons</h3>
+        <p><strong>Favicons</strong> are a website or company's logo that are used to easily identify a website. 
+            They can be displayed on browser tabs, cell phones, smartwatches, and search engine results. 
+            The most common file types for favicons are .ICO, .SVG, and .PNG, but they can also be .GIF.</p></article>
+
+    <article id="css"><h3>Incorporating Stylesheets</h3>
+        <p><strong>CSS</strong> is a way to improve a website's content and structure, and to improve the five E's of Frontend Design. 
+            CSS overrides the standard HTML style, and changes the look and behavior of a website, and improves the design.</p>
+        <p>CSS styles can be incorporated in five different ways. The most common way is using an <strong>external</strong> stylesheet 
+            file that can be linked in the head of an HTML file by using a link tag. Some components can be <strong>imported</strong> 
+            from a global .CSS file by using @import. These are the two ways of externally linking .CSS files. CSS styles can also be 
+            directly implemented into HTML or JavaScript files. Styles can be <strong>embedded</strong> in a style tag, <strong>inline</strong> 
+            using an attribute and value within an element or, in <strong>regular JavaScript</strong>, by changing the Document Object Model.</p></article>
+
+    <article id="forms"><h3>Forms</h3>
+        <p>There are 6 major goals of accessible forms.
+            They include <strong>providing clear instructions</strong> about what to enter, including using placeholder text in the fields to give an example.
+            <strong>Letting users know why</strong> you're asking for this information, and which options are required.
+            <strong>Setting the first field to autofocus</strong>, which allows the person to start filling out the form without moving their mouse.
+            <strong>Ensure each form control can be filled in using the keyboard</strong>, to make it easy for people who aren't able to use a mouse, or don't have one.
+            <strong>Add tab indexing to complex forms</strong>, to make it obvious which order to fill out the fields.
+            <strong>Ensure validation messages are screen readable</strong> to accommodate everyone, especially people with vision problems.
+            </p>
+        <p>Form, fieldset, legend, label, input, select, textarea, and button are some major form tags.
+            The <strong>form</strong> attributes are 'action', telling us where the form request should be sent, and 'method', telling us which HTTP method is used. Typically, 'get', which is the default that is used if we do not add one, or 'post'.
+            <strong>Fieldset</strong> and <strong>legend</strong> are used to separate form controls in groups to make the forms easier to use, and more accessible. Legend is generally placed on top of the fieldset's border and padding, and should explain to the user the purpose of the fieldset.
+            <strong>Label</strong> tags are used alongside controls to describe what the form is looking for. The label's 'for' attribute should match the form control's 'id' attribute so they can be linked.
+            The <strong>input</strong> is a way of collecting data from the user. Each input tag has a 'type' attribute, which defines which of the 22 input types to use. It must also have a 'name' attribute, so the server knows which data item goes with which part of the form. The 'required' attribute type must be included for any input tag that the user must fill out. Text, email, checkbox, and radio are common input types. Checkboxes are used for an input with multiple options that can be selected. Radio are similar to checkboxes, but only one can be selected at a time.
+            <strong>Select</strong> is a drop-down menu for a list of choices. Each select tag should have an option tag, which are used to create the choices in the drop-down menu. Select also uses the name attribute, and should have a selected attribute as a default choice. 
+            The <strong>textarea</strong> tag lets users type lines of text. There should be a description that includes any requirements, so the user understands what to type.
+            Finally, <strong>button</strong> is used to submit the form, and requires user activation.</p>
+            <p>It's important to make sure your form is readable and easy to understand for everyone who views the website, whether it's on a phone or a laptop. 
+                Size, placement, colors, contrast, and spacing must all be taken into consideration for accessibility and ease of use.
+                Changing the color, font size and borders to make the form easier to read and click on with large fingers can help. Adding placeholder text in text boxes, 
+                and proper padding, so the different areas are spaced out enough and not cluttered on top of one another are a few more ways to increase accessibility. Including autofocus in a form allows the 
+                user to begin typing without clicking anything, and the required attribute lets the user know which parts must be filled out. Text and border color 
+                can also be used as indicators to the user for significant parts of the form.</p>
+    <article id="express"><h3>Express</h3>
+        <p>What are these three technologies, and how can we use them to improve the web development experience?
+            <strong>Node</strong> is a program that is used to run server-side web applications without a web browser. 
+            Node's applications are written in JavaScript and can be used with Windows, Linux, and macOS.
+            <strong>NPM</strong> is used to install and manage open source packages from third-party sources with Node. 
+            It is also an online repository that publishes Node packages, as well as a command-line utility to install packages from this online repository.
+            <strong>Express</strong> is a framework used for building web applications with Node. Express can be used to get, post and delete data, as well as serve static files, 
+            create templates, and define routes for data to take.</p></article>
+    <article id="javascript"><h3>JavaScript</h3>
+        <p>The <strong>main data types</strong> in JavaScript are numbers, Boolean values, a string, a symbol, an object, and special values. Numbers 
+            are just the digits between 0 and 9. Boolean values can be one of two values, True or False. A string is an array of characters. The two 
+            special values are 'null' and 'undefined'.</p>
+        <p><strong>Objects</strong> in JavaScript are a set of name-value pairs, called properties. <strong>Arrays</strong> are objects with a set of 
+            values that can hold any JavaScript type, and are accessed by a 0-based index in brackets. Arrays use numbered indexes, starting with 0, 
+            while objects use named indexes.<strong>JSON</strong>, which is short for JavaScript Object Notation, is a way of sending and receiving 
+            information between programming languages. The stringify function is used to convert a JSON string to a JavaScript object, while the parse 
+            function is used to do the opposite.</p>
+        <p><strong>Conditionals</strong> in JavaScript are often used to compare objects, where one branch is taken if something is true, or another 
+            branch is taken if not. Conditionals include if and switch statements, and conditional or ternary operators. Special care must be taken 
+            by using strict equality operators and by ensuring you are using the correct value type so the program performs as intended. 
+            <strong>Loops</strong> are also used in JavaScript to cycle through a list of objects. There are 'while', 'do while', 'for', 'for of' and 
+            'for in' loops. Loops can be used with conditionals to cycle through a list of objects, and take action on certain objects that meet the 
+            set conditions.</p>
+        <p>JavaScript utilizes <strong>Object-Oriented Programming</strong>. An object has identity, meaning each object has its own identity, state, 
+            meaning objects have their own attributes, and behavior, meaning objects have properties, which values are functions.</p>
+        <p>JavaScript also uses <strong>functional programming</strong>, and functions are first-class values. This means we are able to assign other 
+            functions as variables, define functions that return functions, and define functions that receive functions as arguments.</p>
+    </article>
+    </main>
+<footer><p>&copy; 2024 Brett Bittola</p></footer>
+</body>
+</html>

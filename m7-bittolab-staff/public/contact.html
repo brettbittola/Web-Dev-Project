@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,noarchive, nofollow" />
+    <title>Brett Bittola</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <header><img src="android-chrome-192x192.png" alt="Brett Bittola" /><h1>Brett Bittola</h1></header> 
+    <nav><a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+        <a href="staff.html">Staff</a>
+    </nav>
+    <main><section><article>
+        <h2>Contact</h2>
+        <p>Please fill out this form if you are interested in hiring me.</p>
+        <form action="/review" method="POST">
+            <fieldset>
+                <legend>
+                    <p><label>First and Last Name:</p>
+                        <input type="text" 
+                        name="firstLast" 
+                        id="firstLast" 
+                        class="required"
+                        aria-required="true"
+                        size="30" 
+                        maxlength="100" 
+                        required 
+                        placeholder="First and last name" 
+                        autofocus />
+                    </label>
+                    <p><label>Email address:</p>
+                        <input type="email" 
+                        name="email" 
+                        id="email" 
+                        class="required"
+                        aria-required="true"
+                        size="30" 
+                        maxlength="100" 
+                        required 
+                        placeholder="Enter your Email address" />
+                    </label>
+                    <label for="companyDescription"><p>Tell me a little bit about your company. Please stay below 300 characters.</p></label>
+                        <textarea 
+                        name="companyDescription" 
+                        id="companyDescription" 
+                        class="required"
+                        aria-required="true"
+                        minlength="1" 
+                        maxlength="300" 
+                        required 
+                        placeholder="Write 300 characters or less.">
+                        </textarea>
+                    </label>
+                    <label>
+                        <label for="startDate">When would you like me to start?</label>
+                        <select name="dates" id="startDate">
+                            <option value="today" selected>Today</option>
+                            <option value="next week">Next Week</option>
+                            <option value="next month">Next Month</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </label>
+                    <p>Are you currently hiring?
+                        <label for="yes">
+                          <input type="radio" name="hiring" id="yes" value="Yes">
+                            Yes!
+                        </label>
+                        <label for="no">
+                          <input type="radio" name="hiring" id="no" value="No">
+                            Not right now
+                        </label>
+                        <label for="maybe">
+                          <input type="radio" name="hiring" id="maybe" value="Maybe">
+                            Maybe just for you
+                        </label></p>
+                    <p>Please click here if you are interested in being contacted, or if you would like more information about me.</p>
+                    <label for="canContact">
+                          <input type="checkbox" name="getInTouch" id="canContact"  value="can be contacted " checked />
+                          I am interested in being contacted.</label>
+                    
+                    <p> 
+                        <label for="moreInfo">
+                          <input type="checkbox" name="getInTouch" id="moreInfo"  value="want more information" />
+                          I would like a little more information about you.</label>
+                    </p>
+                <button type="submit">Submit review</button>
+                </legend>
+            </fieldset>
+        </form>
+    </article></section></main>
+<footer><p>&copy; 2024 Brett Bittola</p></footer>
+</body>
+</html>
